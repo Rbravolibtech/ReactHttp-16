@@ -9,11 +9,9 @@ function App() {
 
 	const transformTasks = useCallback((tasksObj) => {
 		const loadedTasks = [];
-
 		for (const taskKey in tasksObj) {
 			loadedTasks.push({ id: taskKey, text: tasksObj[taskKey].text });
 		}
-
 		setTasks(loadedTasks);
 	}, []);
 
